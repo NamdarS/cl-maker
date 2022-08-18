@@ -22,13 +22,20 @@
 }
 
 .prompt {
-  display: flex;
-  justify-content: space-evenly;
-  font-family: Roboto, sans-serif;
-  font-size: 2.5vw;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  font-size: 3vw;
   font-weight: bold;
-  text-align: center;
-  margin: 0 auto;
-  margin-top: 15vh;
-  max-width: 80vw;
+  margin: 15vh;
 }
+
+.inter-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 3vh;
+}
+
+.tags-container {
+  max-width: 15vw;
+}
+

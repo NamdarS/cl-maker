@@ -1,19 +1,31 @@
 import Dropdown from './Dropdown';
 import TextEntry from './TextEntry';
 import TagEntry from './TagEntry';
+import ComputerIcon from '@mui/icons-material/Computer';
 
 export default function Prompt(props) {
   return (
     <div className="prompt">
-        <p>write a cover letter for a(n)</p>
+      <div className="inter-text">
+        write a cover letter for a(n)
         <Dropdown level={props.level} value="level" />
-        <p>level</p>
-        <TextEntry text="job" />
-        <p>position at</p>
-        <TextEntry text="company" /> <p>for someone with</p>{' '}
-        <TagEntry text="skills" />
-        <p>skills, and previous experience(s) at</p>{' '}
-        <TagEntry text="companies" />
+        level <TextEntry text="job" />
+      </div>
+      <div className="inter-text">
+        position at <TextEntry text="company" />
+        for someone with {/* skills{' '} */}
+        <ComputerIcon sx={'visibility: hidden'} />
+        <ComputerIcon sx={'visibility: hidden'} />
+      </div>
+      <div className="inter-text">
+        <div className="tags-container">
+          <TagEntry text="skills" />{' '}
+        </div>
+        skills and prior experience(s) at
+        <div className="tags-container">
+          <TagEntry text="companies/projects" />
+        </div>
+      </div>
     </div>
   );
 }
