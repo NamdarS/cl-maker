@@ -9,6 +9,7 @@ export default function TextEntry(props) {
         value={props.value}
         onChange={props.onChange}
         onKeyDown={props.onKeyDown}
+        color="primary"
       />
     </div>
   );

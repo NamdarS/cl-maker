@@ -1,8 +1,11 @@
+import { useState } from 'react';
 import Head from 'next/head';
 import Header from '../components/Header';
 import Prompt from '../components/Prompt';
 
 export default function Home(props) {
+  const [userData, setUserData] = useState([]);
+
 
   return (
     <div>
@@ -11,9 +14,7 @@ export default function Home(props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <Prompt
-        level={props.level}
-      />
+      <Prompt level={props.level} data={userData} pushData={setUserData} />
     </div>
   );
 }

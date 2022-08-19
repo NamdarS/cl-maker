@@ -1,49 +1,28 @@
-import { useState } from 'react';
 import TextEntry from './TextEntry';
 import Button from '@mui/material/Button';
 import CloseIcon from '@mui/icons-material/Close';
 
 export default function TagEntry(props) {
-  const [tag, setTag] = useState('');
-  const [skills, setSkills] = useState([]);
-
-  const handleChange = (event) => {
-    setTag(event.target.value);
-  };
-
-  const handleKeyDown = (event) => {
-    if (event.key === 'Enter') {
-      setSkills([...skills, tag]);
-      setTag('');
-    }
-  };
-
-  const handleDelete = (event) => {
-    console.log(event.currentTarget.id);
-    console.log(skills[event.currentTarget.id]);
-    setSkills(
-      skills.filter((skill) => skill !== skills[event.currentTarget.id])
-    );
-  };
-
   return (
     <div className="tag-entry">
       <div>
         <TextEntry
           text={props.text}
-          value={tag}
-          onChange={handleChange}
-          onKeyDown={handleKeyDown}
+          value={props.value}
+          onChange={props.onChange}
+          onKeyDown={props.onKeyDown}
         />
-        {skills.map((skill, index) => (
+        {props.valueList && (props.valueList.map((value, index) => (
           <Button
             key={index}
             id={index}
-            label={skill}
-            onClick={handleDelete}
+            label={props.value}
+            onClick={props.onDelete}
             endIcon={<CloseIcon />}
-          >{skill}</Button>
-        ))}
+          >
+            {value}
+          </Button>
+        )))}
       </div>
     </div>
   );
