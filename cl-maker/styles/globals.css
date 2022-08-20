@@ -69,3 +69,30 @@
   flex-direction: row;
   margin: 5vh;
 }
+
+.dialog-style {
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  font-size: 3vw;
+  font-weight: bold;
+  margin-top: 15vh;
+  padding: 2vw;
+  border-radius: 2vw;
+}
+
+.letter {
+  margin: 0 auto;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 1.5vw;
+  font-weight: bold;
+  text-align: left;
+  padding: 1vw;
+  max-width: 60vw;
+  background-color: #cee9ff;
+  border: 0.25vw solid #2196f3;
+  margin-top: 2vh;
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
+}

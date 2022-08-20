@@ -2,9 +2,12 @@ import { useState } from 'react';
 import Head from 'next/head';
 import Header from '../components/Header';
 import Prompt from '../components/Prompt';
+import DisplayLetter from '../components/DisplayLetter';
 
-export default function Home(props) {
-  const [userData, setUserData] = useState([]);
+
+export default function Home() {
+  const [userData, setUserData] = useState('');
+  const [letter, setLetter] = useState('');
 
 
   return (
@@ -14,15 +17,13 @@ export default function Home(props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <Prompt level={props.level} data={userData} pushData={setUserData} />
+      <Prompt
+        level={['entry', 'junior', 'mid', 'senior']}
+        data={userData}
+        pushData={setUserData}
+        genLetter={setLetter}
+      />
+      {letter && <DisplayLetter letter={letter} />}
     </div>
   );
-}
-
-export async function getStaticProps() {
-  return {
-    props: {
-      level: ['entry', 'junior', 'mid', 'senior'],
-    },
-  };
 }
