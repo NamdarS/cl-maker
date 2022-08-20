@@ -12,6 +12,7 @@
   font-family: Roboto, sans-serif;
   font-size: 5vw;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .header-menu {
@@ -95,4 +96,24 @@
 .spinner {
   display: flex;
   justify-content: center;
+}
+
+.subtitle {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 3vw;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 15vh;
+}
+
+.paragraph {
+  margin: 0 auto;
+  font-family: 'Roboto';
+  font-size: 2vw;
+  text-align: center;
+  max-width: 70vw;
+  padding: 2vw;
+  border-radius: 1vw;
+  border: 0.25vw solid #b2beb5;
+  background-color: #ece9e9;
 }
