@@ -4,11 +4,9 @@ import Header from '../components/Header';
 import Prompt from '../components/Prompt';
 import DisplayLetter from '../components/DisplayLetter';
 
-
 export default function Home() {
   const [userData, setUserData] = useState('');
   const [letter, setLetter] = useState('');
-
 
   return (
     <div>
@@ -17,6 +15,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
+      <hr className='line'/>
       <Prompt
         level={['entry', 'junior', 'mid', 'senior']}
         data={userData}

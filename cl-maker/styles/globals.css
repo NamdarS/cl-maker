@@ -116,3 +116,9 @@
   border: 0.25vw solid #b2beb5;
   background-color: #ece9e9;
 }
+
+.line {
+  width: 50vw;
+  margin-top: 2vh;
+  border: solid #b2beb5;
+}
