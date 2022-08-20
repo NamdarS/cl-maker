@@ -70,12 +70,14 @@ export default function Prompt(props) {
   };
 
   async function handleSubmit(e) {
+    // prevent submission if no data given
     if (!level || !job || !company || !skills.length || !experiences.length) {
       handleOpen();
       return;
     }
 
-    setLoading(true);
+    setLoading(true); // show loading indicator
+    // construct prompt
     const data = `write a cover letter for ${level} level ${job} position at 
     ${company} for someone with ${skills.join(
       ', '
@@ -91,6 +93,7 @@ export default function Prompt(props) {
     setExperience('');
     setExperiences([]);
 
+    // make request to backend
     const response = await fetch('/api/generate', {
       method: 'POST',
       headers: {
@@ -100,7 +103,7 @@ export default function Prompt(props) {
     });
     const apiResponse = await response.json();
     props.genLetter(apiResponse.result);
-    setLoading(false);
+    setLoading(false); // hide loading indicator
   }
 
   return (
