@@ -12,6 +12,10 @@ export default function About() {
           each job application already takes too much effort, making it nearly
           impossible to write meaningful cover letters. This tool makes the job
           application process just a little bit easier for all job seekers.
+          <br/><br/>
+          It should be noted that this app uses AI to generate cover letters, and AI has 
+          limitations. You should always proofread all generated content before
+          using it in a job application.
         </p>
       </div>
     </div>
