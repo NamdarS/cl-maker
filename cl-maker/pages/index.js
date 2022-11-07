@@ -23,7 +23,6 @@ export default function Home() {
         genLetter={setLetter}
       />
       {letter && <DisplayLetter letter={letter} />}
-      {console.log(letter)}
     </div>
   );
 }
